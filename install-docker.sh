@@ -13,7 +13,7 @@ sudo apt-get install \
 # Add Docker’s official GPG key -->
 echo "Add Docker official GPG key =========================================================================="
 sudo mkdir -p /etc/apt/keyrings
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
 
 # set up the repository -->
 echo "set up the repository ================================================================================"
@@ -32,5 +32,5 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
 # install docker-compose -->
 # see https://docs.docker.com/compose/install/compose-plugin/#installing-compose-on-linux-systems for more details
 echo "install docker-compose ==============================================================================="
-curl -SL https://github.com/docker/compose/releases/download/v2.6.1/docker-compose-linux-x86_64 -o /usr/local/bin/docker-compose
+sudo curl -SL https://github.com/docker/compose/releases/download/v2.6.1/docker-compose-linux-x86_64 -o /usr/local/bin/docker-compose
 sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
