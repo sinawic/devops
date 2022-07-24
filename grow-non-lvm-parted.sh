@@ -29,3 +29,8 @@ resize2fs /dev/sda2
 df /
 # Filesystem     1K-blocks    Used Available Use% Mounted on
 # /dev/sda2       70817420 5253016  62349464   8% /
+
+
+# 
+# for btrfs file system which would throw error on resize2fs level use:
+# sudo btrfs filesystem resize max /
