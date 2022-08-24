@@ -47,3 +47,9 @@ crontab -e
 0 3 * * * /usr/bin/mysqldump -u dbuser mydb > /home/username/db_backups/mydb-$(date +\%Y\%m\%d).sql
 # You can also create another cronjob to delete any backups older than 30 days:
 find /path/to/backups -type f -name "*.sql" -mtime +30 -delete
+
+#######################################################################################
+
+# gzip full import/export
+mysqldump -u [user] -p [db_name] | gzip > [filename_to_compress.sql.gz]
+gunzip < [compressed_filename.sql.gz]  | mysql -u [user] -p[password] [databasename]
