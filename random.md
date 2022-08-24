@@ -14,3 +14,9 @@ unzip /path/to/file.jar
 <!-- lists all files inside zip file -->
 unzip -l /path/to/file.jar
 
+<!-- curl set header -->
+curl -k -X GET \
+  -X POST \
+  https://localhost \
+  -H 'Host: test.com'
+
