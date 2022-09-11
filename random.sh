@@ -30,8 +30,8 @@ docker exec -it gitlab-web-1 gitlab-rake "gitlab:password:reset[root]"
 sudo nmap -p- 0.0.0.0
 
 # add a user to a group
-usermod -aG postgres tecmint
+usermod -aG groupname username
 
 # remove a user from a group
-gpasswd -d tecmint postgres
-sudo deluser tecmint postgres
+gpasswd -d username groupname
+sudo deluser username groupname
