@@ -45,3 +45,7 @@ sudo resize2fs /dev/mapper/ubuntu--vg-ubuntu--lv
 
 # Check Which Folders Use The Highest Disk Space
 du -h / 2>/dev/null | grep '[0-9\.]\+G'
+
+# get ur host ip
+curl https://api.myip.com
+curl https://iplocate.io/api/lookup/
