@@ -35,3 +35,13 @@ usermod -aG groupname username
 # remove a user from a group
 gpasswd -d username groupname
 sudo deluser username groupname
+
+
+# when LV is not equal to all free disk available
+# to extend LV while running the system without issue by doing the following to resize the LV after the install:
+sudo lvresize -l +100%FREE /dev/mapper/ubuntu--vg-ubuntu--lv
+# and then resize the filesystem to fit the new space:
+sudo resize2fs /dev/mapper/ubuntu--vg-ubuntu--lv
+
+# Check Which Folders Use The Highest Disk Space
+du -h / 2>/dev/null | grep '[0-9\.]\+G'
