@@ -1,3 +1,8 @@
+#!/bin/bash
+#title           :minio-mc.sh
+#description     :This script is a small cheet sheet for minio client stuff
+#author          :sinawic
+#date            :20221011
 
 # minio client
 
