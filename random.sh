@@ -49,3 +49,6 @@ du -h / 2>/dev/null | grep '[0-9\.]\+G'
 # get ur host ip
 curl https://api.myip.com
 curl https://iplocate.io/api/lookup/
+
+# get active ssh connections to server
+sudo netstat -tnpa | grep 'ESTABLISHED.*sshd'
