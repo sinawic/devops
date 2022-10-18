@@ -16,6 +16,9 @@ zip -r -e data.zip /path/to/folder1
 # state password on the CLI to encrypt zipfile entries:
 zip -r -e -P 'YOUR_PASSWORD_HERE' output.zip /path/to/folder/
 
+# zip a directory and exclude a directory <volumes> inside it
+zip -r file.zip dir/ -x dir/volumes/**\*
+
 # Option  Description
 : << 'COMMENT'
 -f  freshen: only changed files
