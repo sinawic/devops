@@ -1,3 +1,12 @@
+#!/bin/bash
+#title           :zip.sh
+#description     :This is a cheat sheet of zip command in unix env
+#author          :sinawic
+#date            :20220914
+
+# 
+# zip command cheat sheet
+# 
 
 # install the zip command
 sudo apt install zip unzip
