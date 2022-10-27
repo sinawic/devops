@@ -16,7 +16,7 @@ ssh -L 6900:192.168.199.153:80 localhost
 
 # Remote Port Forwarding
 # configure server to allow forwarded ports to be accessed over the internet
-sudo nano /etc/sshd_config
+sudo nano /etc/ssh/sshd_config
 
 # find GatewayPorts
 # uncomment it and set it to yes
