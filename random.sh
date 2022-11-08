@@ -52,3 +52,8 @@ curl https://iplocate.io/api/lookup/
 
 # get active ssh connections to server
 sudo netstat -tnpa | grep 'ESTABLISHED.*sshd'
+
+# Prevent SSH connection lost after logging into VPN on server machine
+# before creating a vpn connection, first create a route
+# -host being the ip of server gw being the ip of router
+route add -host 1.2.3.4 gw 1.2.3.254
