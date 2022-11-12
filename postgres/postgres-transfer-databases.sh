@@ -4,7 +4,7 @@
 #author          :sinawic
 #date            :202201112
 
-WORKDIR=/home/sayadi/devops/postgres-chista
+WORKDIR=/home/user/dir
 SOURCE_DBNAME=( 'dbname1' 'dbname2' )
 SOURCE_IP=172.200.111.166
 DEST_DBNAME=( 'dbname3' 'dbname4' )
