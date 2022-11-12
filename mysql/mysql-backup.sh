@@ -1,3 +1,8 @@
+#!/bin/bash
+#title           :mysql-backup.sh
+#description     :This is a cheatsheet for mysql backup and restore commands
+#author          :sinawic
+#date            :20221112
 
 # Backup a Single MySQL Database
 mysqldump -u root -p database_name > database_name.sql
@@ -53,3 +58,15 @@ find /path/to/backups -type f -name "*.sql" -mtime +30 -delete
 # gzip full import/export
 mysqldump -u [user] -p [db_name] | gzip > [filename_to_compress.sql.gz]
 gunzip < [compressed_filename.sql.gz]  | mysql -u [user] -p[password] [databasename]
+
+# to drop specific tables from a database
+# done in mysql query shell
+# first get the list of tables we want to drop
+SELECT table_name FROM information_schema.tables
+WHERE table_schema = 'dbname';
+
+# set foreign_key_checks to false so the engine wont throw errors fo foreign keys
+SET foreign_key_checks = 0;
+DROP TABLE IF EXISTS dbname.tbl1, dbname.tbl2;
+SET foreign_key_checks = 1;
+
