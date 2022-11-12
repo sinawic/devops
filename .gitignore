@@ -1,4 +1,5 @@
 servers.txt
 documentation/
 enjoy-backup/
-mysqldump/
+mysql-chista/
+postgres-chista/
