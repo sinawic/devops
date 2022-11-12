@@ -1,3 +1,8 @@
+#!/bin/bash
+#title           :postgres.sh
+#description     :This is a cheatsheet for postgres database
+#author          :sinawic
+#date            :202201112
 
 # Connect to PostgreSQL database
 psql -d database -U  user -W
