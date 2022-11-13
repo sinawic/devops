@@ -23,9 +23,8 @@ sudo nginx -t
 <!-- Restart nginx service -->
 sudo systemctl restart nginx
 
-<!-- also for namaa -->
+<!-- also for kong -->
 <!-- got to the konga panel, in the certs -->
-<!-- the certs related to namaa -->
 <!-- replace the privkey with new privkey content -->
 <!-- replace the cert with newly created fullchain content -->
 
