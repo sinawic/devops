@@ -61,3 +61,7 @@ route add -host 1.2.3.4 gw 1.2.3.254
 # retrieve specific field from a json
 curl https://site.com | jq -r '.country'
 
+# systemd-resolve is used for DNS. You can flush systemd's caches like so
+sudo systemd-resolve --flush-caches
+# to check the local dns cache size
+systemd-resolve --statistics
