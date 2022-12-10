@@ -57,6 +57,8 @@ sudo netstat -tnpa | grep 'ESTABLISHED.*sshd'
 # before creating a vpn connection, first create a route
 # -host being the ip of server gw being the ip of router
 route add -host 1.2.3.4 gw 1.2.3.254
+# or add an IP range route
+route add -net 1.2.10.0/24 gw 1.2.11.254
 
 # retrieve specific field from a json
 curl https://site.com | jq -r '.country'
