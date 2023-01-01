@@ -67,3 +67,6 @@ curl https://site.com | jq -r '.country'
 sudo systemd-resolve --flush-caches
 # to check the local dns cache size
 systemd-resolve --statistics
+
+# bash: Test disk I/O speed from console/ssh
+dd if=/dev/zero of=test bs=64k count=16k conv=fdatasync && rm test
