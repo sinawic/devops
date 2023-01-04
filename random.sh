@@ -73,3 +73,8 @@ dd if=/dev/zero of=test bs=64k count=16k conv=fdatasync && rm test
 
 # get user id of a linux user
 id -u <username>
+
+# check name resolution and connection to a service on a port
+nc -vz postgres 5432
+curl postgres:5432
+telnet postgres 5432
