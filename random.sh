@@ -70,3 +70,6 @@ systemd-resolve --statistics
 
 # bash: Test disk I/O speed from console/ssh
 dd if=/dev/zero of=test bs=64k count=16k conv=fdatasync && rm test
+
+# get user id of a linux user
+id -u <username>
