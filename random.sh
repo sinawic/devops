@@ -49,6 +49,7 @@ du -h / 2>/dev/null | grep '[0-9\.]\+G'
 # get ur host ip
 curl https://api.myip.com
 curl https://iplocate.io/api/lookup/
+curl -s https://api.ipify.org
 
 # get active ssh connections to server
 sudo netstat -tnpa | grep 'ESTABLISHED.*sshd'
@@ -81,3 +82,4 @@ id -u <username>
 nc -vz postgres 5432
 curl postgres:5432
 telnet postgres 5432
+
