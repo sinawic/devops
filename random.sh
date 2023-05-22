@@ -83,3 +83,18 @@ nc -vz postgres 5432
 curl postgres:5432
 telnet postgres 5432
 
+# prevent a background process from logging
+docker build -t x:x . 2>&1 &
+
+# list sessions active jobs
+jobs
+
+# bring a background job to forward
+fg %1
+
+# send a job to background
+bg %1
+# or interactively by hitting Ctrl + z
+
+# kill a job
+kill %1
