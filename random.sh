@@ -98,3 +98,6 @@ bg %1
 
 # kill a job
 kill %1
+
+# replace a text in a file
+sed -i 's/search_string/replace_string/' filename
