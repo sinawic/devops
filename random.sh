@@ -101,3 +101,11 @@ kill %1
 
 # replace a text in a file
 sed -i 's/search_string/replace_string/' filename
+
+# get a running docker container full id
+docker inspect --format="{{.Id}}" httpd-container
+# return format result as json. getting the raw value of .Status field
+docker inspect --format="{{json .State.Health}}" httpd-container | jq -r .Status
+
+# get list of running containers id
+docker ps --format "{{.ID}}"
