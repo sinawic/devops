@@ -109,3 +109,7 @@ docker inspect --format="{{json .State.Health}}" httpd-container | jq -r .Status
 
 # get list of running containers id
 docker ps --format "{{.ID}}"
+
+# ssh without asking for password with custom port
+# needs: apt-get install sshpass
+sshpass -p "YOUR_PASSWORD" ssh -o StrictHostKeyChecking=no YOUR_USERNAME@SOME_SITE.COM:2400
