@@ -24,7 +24,9 @@ curl -k -X GET \
 mkpasswd -m sha-512
 
 # reset gitlab user's pass
-docker exec -it gitlab-web-1 gitlab-rake "gitlab:password:reset[root]"
+docker exec -it gitlab gitlab-rake "gitlab:password:reset[root]"
+# get gitlab initial root password
+docker exec -it gitlab grep 'Password:' /etc/gitlab/initial_root_password
 
 # nmap look for all ports
 sudo nmap -p- 0.0.0.0
