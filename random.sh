@@ -115,3 +115,6 @@ docker ps --format "{{.ID}}"
 # ssh without asking for password with custom port
 # needs: apt-get install sshpass
 sshpass -p "YOUR_PASSWORD" ssh -o StrictHostKeyChecking=no YOUR_USERNAME@SOME_SITE.COM:2400
+
+# pass in password to sudo command
+echo 'sudo_password' | sudo -S ls
