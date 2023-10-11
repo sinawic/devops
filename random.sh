@@ -103,6 +103,7 @@ kill %1
 
 # replace a text in a file
 sed -i 's/search_string/replace_string/' filename
+sed -i 's#y/x#x/y#g' filename
 
 # get a running docker container full id
 docker inspect --format="{{.Id}}" httpd-container
@@ -118,3 +119,7 @@ sshpass -p "YOUR_PASSWORD" ssh -o StrictHostKeyChecking=no YOUR_USERNAME@SOME_SI
 
 # pass in password to sudo command
 echo 'sudo_password' | sudo -S ls
+
+# expose docker socket to tcp protocol
+dockerd -H unix:///var/run/docker.sock -H tcp://0.0.0.0:2375
+curl http:/localhost:2375/containers/json -X GET
