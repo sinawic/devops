@@ -20,6 +20,9 @@ curl -k -X GET \
   https://localhost \
   -H 'Host: test.com'
 
+# curl post with json body data
+curl -X POST -H "Content-Type: application/json" -d '{"key1":"value1", "key2":"value2"}' https://example.com/endpoint
+
 # make linux user pass
 mkpasswd -m sha-512
 
@@ -115,7 +118,7 @@ docker ps --format "{{.ID}}"
 
 # ssh without asking for password with custom port
 # needs: apt-get install sshpass
-sshpass -p "YOUR_PASSWORD" ssh -o StrictHostKeyChecking=no YOUR_USERNAME@SOME_SITE.COM:2400
+sshpass -p "YOUR_PASSWORD" ssh -p 2400 -o StrictHostKeyChecking=no YOUR_USERNAME@SOME_SITE.COM
 
 # pass in password to sudo command
 echo 'sudo_password' | sudo -S ls
